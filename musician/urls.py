@@ -2,7 +2,9 @@ from django.urls import path, include
 from musician.views import MusicianViewSet
 
 
-musician_list = MusicianViewSet.as_view(actions={"get": "list", "post": "create"})
+musician_list = MusicianViewSet.as_view(
+    actions={"get": "list", "post": "create"}
+)
 musician_detail = MusicianViewSet.as_view(
     actions={
         "get": "retrieve",
